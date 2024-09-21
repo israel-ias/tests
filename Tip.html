@@ -1,0 +1,117 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>sudoku</title>
+        <style>
+            body{
+                background:blue;
+                position: relative;
+                margin:0;
+                padding: 0;
+            }
+            h1{
+                position: absolute;
+                color: #fff;
+                top: 50%;
+                left: 0;
+                right: 0;
+                line-height: 200px;
+                margin-top: -100px;
+                font-size: 80px;
+                text-align: center;
+            }
+            h2{
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                font-size: 24px;
+                color: #aaa;
+                text-align: center;
+            }
+            #btn{
+                background-color: #fff;
+                color: blue;
+                position: absolute;
+                top:50%;
+                left:50%;
+                height: 50px;
+                width: 300px;
+                line-height: 50px;
+                text-align: center;
+                margin-top: -25px ;
+                margin-left: -150px;
+            }
+            #btnRight{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 100px;
+                width: 35%;
+                line-height: 100px;
+                font-size: 30px;
+                background-color: green;
+                color: #fff;
+                display: none;
+            }
+            #btnNext{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 100px;
+                width: 35%;
+                line-height: 100px;
+                font-size: 30px;
+                background-color: red;
+                color: #fff;
+                display: none;
+            }
+            ul{
+                position: absolute;
+                top:10px;
+                left: 10px;
+                margin: 0;
+                padding: 0;
+                transition: all .6s;
+            }
+            li{
+                display: block;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                color: #fff;
+                font-size: 16px;
+                line-height: 24px;
+                transition: all .6s;
+            }
+            li span{
+                font-weight: bold;
+            }
+            .result{
+                top:50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .result li{
+                font-size: 35px;
+                line-height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="result">
+            <li>Manuela: <span id="manu"></span></li>
+            <li>Migueo: <span id="mig"></span></li>
+            <li>Karol: <span id="ka"></span></li>
+            <li>Israel: <span id="israel"></span></li>
+        </ul>
+        <h1 id="objName"></h1>
+        <h2 id="timer"></h2>
+        <button id="btn" onclick="startGame()">Começar</button>
+        <button id="btnRight" onclick="correct()">Correta</button>
+        <button id="btnNext" onclick="showNext()">Pular</button>
+        <script src="tip.js"></script>
+    </body>
+    </html>
